@@ -575,7 +575,7 @@ Bool_t Y4140::Process(Long64_t entry)
 
 
        		    //////////// Phi Cut ////////////             
-                    if ((ka1ka2.M()) > 0.097 && (ka1ka2.M()) < 1.07) {  /// 1.008-1.035 first cut // 1.0125-1.0265 CMS B+ // 1.012-1.029 D0 // 1.013-1.026 last cut
+                    if ((ka1ka2.M()) > 1.013 && (ka1ka2.M()) < 1.026) {  /// 1.008-1.035 first cut // 1.0125-1.0265 CMS B+ // 1.012-1.029 D0 // 1.013-1.026 last cut
 			if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                         Hist_Y4140_mass_Phi->Fill((*XMass)[myXIdx]);
                         }  
