@@ -90,123 +90,123 @@ void Y4140::SlaveBegin(TTree * /*tree*/)
    Phi_mass = 1.020; /// pdg mass 
 
    /// refit muons & kaons
-   Hist_Muon1_pt         = new TH1F ("Muon1_pT", "Muon1_pT; pT(#mu^{-}) [GeV];Entries",100, 3, 20);
-   Hist_Muon1_Eta        = new TH1F ("Muon1_Eta","Muon1_Eta; Eta(#mu^{-});Entries",100, -5, 5);
-   Hist_Muon1_Phi        = new TH1F ("Muon1_Phi","Muon1_Phi; Phi(#mu^{-});Entries ",100, -5, 5);
-   Hist_Muon2_pt         = new TH1F ("Muon2_pT", "Muon2_pT; pT(#mu^{+}) [GeV];Entries",100, 3, 20);
-   Hist_Muon2_Eta        = new TH1F ("Muon2_Eta","Muon2_Eta; Eta(#mu^{+});Entries",100, -5, 5);
-   Hist_Muon2_Phi        = new TH1F ("Muon2_Phi","Muon2_Phi; Phi(#mu^{+});Entries",100, -5, 5);
-   Hist_Muon1PtvsMuon2Pt = new TH2F ("Muon1PtvsMuon2Pt","Muon1PtvsMuon2Pt; pT(#mu^{-}) [GeV];pT(#mu^{+}) [GeV]",100, 3, 20,100, 3, 20); /// scatter plot  
-   Hist_Kaon1_pt         = new TH1F ("Kaon1_pT","Kaon1_pT; pT(K^{-}) [GeV];Entries",100, 0, 10);
-   Hist_Kaon1_Eta        = new TH1F ("Kaon1_Eta","Kaon1_Eta; Eta(K^{-});Entries",100, -5, 5);
-   Hist_Kaon1_Phi        = new TH1F ("Kaon1_Phi","Kaon1_Phi; Phi(K^{-});Entries",100, -5, 5);
-   Hist_Kaon2_pt         = new TH1F ("Kaon2_pT","Kaon2_pT; pT(K^{+}) [GeV];Entries",100, 0, 10);
-   Hist_Kaon2_Eta        = new TH1F ("Kaon2_Eta","Kaon2_Eta; Eta(K^{+});Entries",100, -5, 5);
-   Hist_Kaon2_Phi        = new TH1F ("Kaon2_Phi","Kaon2_Phi; Phi(K^{+});Entries",100, -5, 5);
-   Hist_Kaon1PtvsKaon2Pt = new TH2F ("Kaon1PtvsKaon2Pt","Kaon1PtvsKaon2Pt; pT(K^{-}) [GeV];pT(K^{+}) [GeV];",100, 0, 10,100, 0, 10); /// scatter plot
+   Hist_Muon1_pt         = new TH1F ("Muon1_pT", "Muon1_pT; pT(#mu^{1}) [GeV];Entries",100, 3, 20);
+   Hist_Muon1_Eta        = new TH1F ("Muon1_Eta","Muon1_Eta; Eta(#mu^{1});Entries",100, -5, 5);
+   Hist_Muon1_Phi        = new TH1F ("Muon1_Phi","Muon1_Phi; Phi(#mu^{1});Entries ",100, -5, 5);
+   Hist_Muon2_pt         = new TH1F ("Muon2_pT", "Muon2_pT; pT(#mu^{2}) [GeV];Entries",100, 3, 20);
+   Hist_Muon2_Eta        = new TH1F ("Muon2_Eta","Muon2_Eta; Eta(#mu^{2});Entries",100, -5, 5);
+   Hist_Muon2_Phi        = new TH1F ("Muon2_Phi","Muon2_Phi; Phi(#mu^{2});Entries",100, -5, 5);
+   Hist_Muon1PtvsMuon2Pt = new TH2F ("Muon1PtvsMuon2Pt","Muon1PtvsMuon2Pt; pT(#mu^{1}) [GeV];pT(#mu^{2}) [GeV]",100, 3, 20,100, 3, 20); /// scatter plot  
+   Hist_Kaon1_pt         = new TH1F ("Kaon1_pT","Kaon1_pT; pT(K^{1}) [GeV];Entries",100, 0, 10);
+   Hist_Kaon1_Eta        = new TH1F ("Kaon1_Eta","Kaon1_Eta; Eta(K^{1});Entries",100, -5, 5);
+   Hist_Kaon1_Phi        = new TH1F ("Kaon1_Phi","Kaon1_Phi; Phi(K^{1});Entries",100, -5, 5);
+   Hist_Kaon2_pt         = new TH1F ("Kaon2_pT","Kaon2_pT; pT(K^{2}) [GeV];Entries",100, 0, 10);
+   Hist_Kaon2_Eta        = new TH1F ("Kaon2_Eta","Kaon2_Eta; Eta(K^{2});Entries",100, -5, 5);
+   Hist_Kaon2_Phi        = new TH1F ("Kaon2_Phi","Kaon2_Phi; Phi(K^{2});Entries",100, -5, 5);
+   Hist_Kaon1PtvsKaon2Pt = new TH2F ("Kaon1PtvsKaon2Pt","Kaon1PtvsKaon2Pt; pT(K^{1}) [GeV];pT(K^{2}) [GeV];",100, 0, 10,100, 0, 10); /// scatter plot
 
    /// muon pairs from original muons
-   Hist_mumu_mass = new TH1F ("mumu_mass","mumu_mass;M(#mu^{-}#mu^{+}) [GeV];Entries",100, 2.8, 3.4); 
-   Hist_mumu_pt   = new TH1F ("mumu_pT", "mumu_pT; pT(#mu^{-}#mu^{+}) [GeV];Entries",100, 0, 50);
-   Hist_mumu_Eta  = new TH1F ("mumu_Eta","mumu_Eta; Eta(#mu^{-}#mu^{+});Entries",100, -5, 5);
-   Hist_mumu_Phi  = new TH1F ("mumu_Phi","mumu_Phi; Phi(#mu^{-}#mu^{+});Entries ",100, -5, 5);
-   Hist_kk_mass   = new TH1F ("kk_mass","kk_mass;M(K^{-}K^{+}) [GeV];Entries",100, 0.97, 1.07);
-   Hist_kk_pt     = new TH1F ("kk_pT", "kk_pT; pT(K^{-}K^{+}) [GeV];Entries",100, 0, 50);
-   Hist_kk_Eta    = new TH1F ("kk_Eta","kk_Eta; Eta(K^{-}K^{+});Entries",100, -5, 5);
-   Hist_kk_Phi    = new TH1F ("kk_Phi","kk_Phi; Phi(K^{-}K^{+});Entries ",100, -5, 5);
+   Hist_mumu_mass = new TH1F ("mumu_mass","mumu_mass;M(#mu^{+}#mu^{-}) [GeV];Entries",100, 2.8, 3.4); 
+   Hist_mumu_pt   = new TH1F ("mumu_pT", "mumu_pT; pT(#mu^{+}#mu^{-}) [GeV];Entries",100, 0, 50);
+   Hist_mumu_Eta  = new TH1F ("mumu_Eta","mumu_Eta; Eta(#mu^{+}#mu^{-});Entries",100, -5, 5);
+   Hist_mumu_Phi  = new TH1F ("mumu_Phi","mumu_Phi; Phi(#mu^{+}#mu^{-});Entries ",100, -5, 5);
+   Hist_kk_mass   = new TH1F ("kk_mass","kk_mass;M(K^{+}K^{-}) [GeV];Entries",100, 0.97, 1.07);
+   Hist_kk_pt     = new TH1F ("kk_pT", "kk_pT; pT(K^{+}K^{-}) [GeV];Entries",100, 0, 50);
+   Hist_kk_Eta    = new TH1F ("kk_Eta","kk_Eta; Eta(K^{+}K^{-});Entries",100, -5, 5);
+   Hist_kk_Phi    = new TH1F ("kk_Phi","kk_Phi; Phi(K^{+}K^{-});Entries ",100, -5, 5);
 
    /// refit muons from JPsi & refit kaons from Phi 
-   Hist_JPsi_mass         = new TH1F ("JPsi_mass","JPsi_mass;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4);
-   Hist_JPsi_pt           = new TH1F ("JPsi_pT", "JPsi_pT; pT(#mu^{-}#mu^{+}) [GeV];Entries",100, 6, 50);
-   Hist_JPsi_Eta          = new TH1F ("JPsi_Eta","JPsi_Eta; Eta(#mu^{-}#mu^{+});Entries",100, -5, 5);
-   Hist_JPsi_Phi          = new TH1F ("JPsi_Phi","JPsi_Phi; Phi(#mu^{-}#mu^{+});Entries ",100, -5, 5);
-   Hist_JPsi_PtvsEta      = new TH2F ("JPsi_PtvsEta","JPsi_PtvsEta;Eta(#mu^{-}#mu^{+});pT(#mu^{-}#mu^{+}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
-   Hist_JPsi_mass_HLT     = new TH1F ("JPsi_mass_HLT","JPsi_mass_HLT;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4); 
-   Hist_JPsi_mass_SoftMu  = new TH1F ("JPsi_mass_SoftMu","JPsi_mass_SoftMu;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4);
-   Hist_JPsi_PtvsEta_JPsi = new TH2F ("JPsi_PtvsEta_JPsi","JPsi_PtvsEta_JPsi;Eta(#mu^{-}#mu^{+});pT(#mu^{-}#mu^{+}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
-   Hist_Phi_mass          = new TH1F ("Phi_mass","Phi_mass;M(K^{-}K^{+}) [GeV];Entries",100, 0.97, 1.07);
-   Hist_Phi_pt            = new TH1F ("Phi_pT", "Phi_pT; pT(K^{-}K^{+}) [GeV];Entries",100, 0, 50);
-   Hist_Phi_Eta           = new TH1F ("Phi_Eta","Phi_Eta; Eta(K^{-}K^{+});Entries",100, -5, 5);
-   Hist_Phi_Phi           = new TH1F ("Phi_Phi","Phi_Phi; Phi(K^{-}K^{+});Entries ",100, -5, 5);
-   Hist_Phi_PtvsEta       = new TH2F ("Phi_PtvsEta","Phi_PtvsEta;Eta(K^{-}K^{+});pT(K^{-}K^{+}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
-   Hist_Phi_PtvsEta_JPsi  = new TH2F ("Phi_PtvsEta_JPsi","Phi_PtvsEta_JPsi;Eta(K^{-}K^{+});pT(K^{-}K^{+}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
+   Hist_JPsi_mass         = new TH1F ("JPsi_mass","JPsi_mass;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4);
+   Hist_JPsi_pt           = new TH1F ("JPsi_pT", "JPsi_pT; pT(#mu^{+}#mu^{-}) [GeV];Entries",100, 6, 50);
+   Hist_JPsi_Eta          = new TH1F ("JPsi_Eta","JPsi_Eta; Eta(#mu^{+}#mu^{-});Entries",100, -5, 5);
+   Hist_JPsi_Phi          = new TH1F ("JPsi_Phi","JPsi_Phi; Phi(#mu^{+}#mu^{-});Entries ",100, -5, 5);
+   Hist_JPsi_PtvsEta      = new TH2F ("JPsi_PtvsEta","JPsi_PtvsEta;Eta(#mu^{+}#mu^{-});pT(#mu^{+}#mu^{-}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
+   Hist_JPsi_mass_HLT     = new TH1F ("JPsi_mass_HLT","JPsi_mass_HLT;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4); 
+   Hist_JPsi_mass_SoftMu  = new TH1F ("JPsi_mass_SoftMu","JPsi_mass_SoftMu;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4);
+   Hist_JPsi_PtvsEta_JPsi = new TH2F ("JPsi_PtvsEta_JPsi","JPsi_PtvsEta_JPsi;Eta(#mu^{+}#mu^{-});pT(#mu^{+}#mu^{-}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
+   Hist_Phi_mass          = new TH1F ("Phi_mass","Phi_mass;M(K^{+}K^{-}) [GeV];Entries",100, 0.97, 1.07);
+   Hist_Phi_pt            = new TH1F ("Phi_pT", "Phi_pT; pT(K^{+}K^{-}) [GeV];Entries",100, 0, 50);
+   Hist_Phi_Eta           = new TH1F ("Phi_Eta","Phi_Eta; Eta(K^{+}K^{-});Entries",100, -5, 5);
+   Hist_Phi_Phi           = new TH1F ("Phi_Phi","Phi_Phi; Phi(K^{+}K^{-});Entries ",100, -5, 5);
+   Hist_Phi_PtvsEta       = new TH2F ("Phi_PtvsEta","Phi_PtvsEta;Eta(K^{+}K^{-});pT(K^{+}K^{-}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
+   Hist_Phi_PtvsEta_JPsi  = new TH2F ("Phi_PtvsEta_JPsi","Phi_PtvsEta_JPsi;Eta(K^{+}K^{-});pT(K^{+}K^{-}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
 
    /// Bs0 & Some Cuts 
-   Hist_Bs0_Y_mass_fromNTuple = new TH1F ("Bs0_Y_mass_fromNTuple","Bs0_Y_mass_fromNTuple;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4., 6.);
-   Hist_Bs0_Y_mass            = new TH1F ("Bs0_Y_mass","Bs0_Y_mass;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4., 6.);
-   Hist_Bs0_Y_pt              = new TH1F ("Bs0_Y_pT","Bs0_Y_pT; pT(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100, 6, 50);
-   Hist_Bs0_Y_Eta             = new TH1F ("Bs0_Y_Eta","Bs0_Y_Eta; Eta(#mu^{-}#mu^{+}K^{-}K^{+});Entries",100, -5, 5);
-   Hist_Bs0_Y_Phi             = new TH1F ("Bs0_Y_Phi","Bs0_Y_Phi; Phi (#mu^{-}#mu^{+}K^{-}K^{+});Entries",100, -5, 5);
+   Hist_Bs0_Y_mass_fromNTuple = new TH1F ("Bs0_Y_mass_fromNTuple","Bs0_Y_mass_fromNTuple;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4., 6.);
+   Hist_Bs0_Y_mass            = new TH1F ("Bs0_Y_mass","Bs0_Y_mass;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4., 6.);
+   Hist_Bs0_Y_pt              = new TH1F ("Bs0_Y_pT","Bs0_Y_pT; pT(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100, 6, 50);
+   Hist_Bs0_Y_Eta             = new TH1F ("Bs0_Y_Eta","Bs0_Y_Eta; Eta(#mu^{+}#mu^{-}K^{+}K^{-});Entries",100, -5, 5);
+   Hist_Bs0_Y_Phi             = new TH1F ("Bs0_Y_Phi","Bs0_Y_Phi; Phi (#mu^{+}#mu^{-}K^{+}K^{-});Entries",100, -5, 5);
 
    /// Y4140 & Some Cuts (HLT, SoftMu, JPsi, Bs0, Phi, Prompt, Middle, Non-Prompt)
-   Hist_Y4140_mass           = new TH1F ("Y4140_mass","Y4140_mass;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100, 4.0, 4.9);
-   Hist_Y4140_pt             = new TH1F ("Y4140_pT","Y4140_pT; pT(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100, 8, 50);
-   Hist_Y4140_Eta            = new TH1F ("Y4140_Eta","Y4140_Eta; Eta(#mu^{-}#mu^{+}K^{-}K^{+});Entries",100, -5, 5);
-   Hist_Y4140_Phi            = new TH1F ("Y4140_Phi","Y4140_Phi; Phi (#mu^{-}#mu^{+}K^{-}K^{+});Entries",100, -5, 5); 
-   Hist_Y4140_PtvsEta        = new TH2F ("Y4140_PtvsEta","Y4140_PtvsEta;Eta(#mu^{-}#mu^{+}K^{-}K^{+});pT(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
-   Hist_Y4140_mass_HLT       = new TH1F ("Y4140_mass_HLT","Y4140_mass_HLT;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100, 4.0, 4.9);   
-   Hist_Y4140_mass_SoftMu    = new TH1F ("Y4140_mass_SoftMu","Y4140_mass_SoftMu;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);  
-   Hist_Y4140_mass_JPsi      = new TH1F ("Y4140_mass_JPsi","Y4140_mass_JPsi;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_PtvsEta_JPsi   = new TH2F ("Y4140_PtvsEta_JPsi","Y4140_PtvsEta_JPsi;Eta(#mu^{-}#mu^{+}K^{-}K^{+});pT(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV]",100, -2.6, 2.6, 100, 5, 35);   
-   Hist_Y4140_mass_Prompt    = new TH1F ("Y4140_mass_Prompt","Y4140_mass_Prompt;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_Mixed     = new TH1F ("Y4140_mass_Mixed","Y4140_mass_Mixed;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_NonPrompt = new TH1F ("Y4140_mass_NonPrompt","Y4140_mass_NonPrompt;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_Track     = new TH1F ("Y4140_mass_Track","Y4140_mass_Track;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_TrackP    = new TH1F ("Y4140_mass_TrackP","Y4140_mass_TrackP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_TrackM    = new TH1F ("Y4140_mass_TrackM","Y4140_mass_TrackM;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_TrackNP   = new TH1F ("Y4140_mass_TrackNP","Y4140_mass_TrackNP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_Phi       = new TH1F ("Y4140_mass_Phi","Y4140_mass_Phi;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_PhiP      = new TH1F ("Y4140_mass_PhiP","Y4140_mass_PhiP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_PhiM      = new TH1F ("Y4140_mass_PhiM","Y4140_mass_PhiM;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_Y4140_mass_PhiNP     = new TH1F ("Y4140_mass_PhiNP","Y4140_mass_PhiNP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);   
-   Hist_Y4140_mass_Bs0       = new TH1F ("Y4140_mass_Bs0","Y4140_mass_Bs0;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass           = new TH1F ("Y4140_mass","Y4140_mass;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100, 4.0, 4.9);
+   Hist_Y4140_pt             = new TH1F ("Y4140_pT","Y4140_pT; pT(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100, 8, 50);
+   Hist_Y4140_Eta            = new TH1F ("Y4140_Eta","Y4140_Eta; Eta(#mu^{+}#mu^{-}K^{+}K^{-});Entries",100, -5, 5);
+   Hist_Y4140_Phi            = new TH1F ("Y4140_Phi","Y4140_Phi; Phi (#mu^{+}#mu^{-}K^{+}K^{-});Entries",100, -5, 5); 
+   Hist_Y4140_PtvsEta        = new TH2F ("Y4140_PtvsEta","Y4140_PtvsEta;Eta(#mu^{+}#mu^{-}K^{+}K^{-});pT(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
+   Hist_Y4140_mass_HLT       = new TH1F ("Y4140_mass_HLT","Y4140_mass_HLT;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100, 4.0, 4.9);   
+   Hist_Y4140_mass_SoftMu    = new TH1F ("Y4140_mass_SoftMu","Y4140_mass_SoftMu;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);  
+   Hist_Y4140_mass_JPsi      = new TH1F ("Y4140_mass_JPsi","Y4140_mass_JPsi;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_PtvsEta_JPsi   = new TH2F ("Y4140_PtvsEta_JPsi","Y4140_PtvsEta_JPsi;Eta(#mu^{+}#mu^{-}K^{+}K^{-});pT(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV]",100, -2.6, 2.6, 100, 5, 35);   
+   Hist_Y4140_mass_Prompt    = new TH1F ("Y4140_mass_Prompt","Y4140_mass_Prompt;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_Mixed     = new TH1F ("Y4140_mass_Mixed","Y4140_mass_Mixed;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_NonPrompt = new TH1F ("Y4140_mass_NonPrompt","Y4140_mass_NonPrompt;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_Track     = new TH1F ("Y4140_mass_Track","Y4140_mass_Track;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_TrackP    = new TH1F ("Y4140_mass_TrackP","Y4140_mass_TrackP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_TrackM    = new TH1F ("Y4140_mass_TrackM","Y4140_mass_TrackM;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_TrackNP   = new TH1F ("Y4140_mass_TrackNP","Y4140_mass_TrackNP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_Phi       = new TH1F ("Y4140_mass_Phi","Y4140_mass_Phi;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_PhiP      = new TH1F ("Y4140_mass_PhiP","Y4140_mass_PhiP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_PhiM      = new TH1F ("Y4140_mass_PhiM","Y4140_mass_PhiM;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_Y4140_mass_PhiNP     = new TH1F ("Y4140_mass_PhiNP","Y4140_mass_PhiNP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);   
+   Hist_Y4140_mass_Bs0       = new TH1F ("Y4140_mass_Bs0","Y4140_mass_Bs0;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
    
-   Hist_Y4140_mass_Bs0P      = new TH1F ("Y4140_mass_Bs0P","Y4140_mass_Bs0P;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_SC_JPsi_mass_Bs0P    = new TH1F ("SC_JPsi_mass_Bs0P","SC_JPsi_mass_Bs0P;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4);
-   Hist_SC_Phi_mass_Bs0P     = new TH1F ("SC_Phi_mass_Bs0P","SC_Phi_mass_Bs0P;M(K^{-}K^{+}) [GeV];Entries",100, 0.97, 1.07);   
+   Hist_Y4140_mass_Bs0P      = new TH1F ("Y4140_mass_Bs0P","Y4140_mass_Bs0P;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_SC_JPsi_mass_Bs0P    = new TH1F ("SC_JPsi_mass_Bs0P","SC_JPsi_mass_Bs0P;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4);
+   Hist_SC_Phi_mass_Bs0P     = new TH1F ("SC_Phi_mass_Bs0P","SC_Phi_mass_Bs0P;M(K^{+}K^{-}) [GeV];Entries",100, 0.97, 1.07);   
    
-   Hist_Y4140_mass_Bs0M      = new TH1F ("Y4140_mass_Bs0M","Y4140_mass_Bs0M;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_SC_JPsi_mass_Bs0M    = new TH1F ("SC_JPsi_mass_Bs0M","SC_JPsi_mass_Bs0M;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4);
-   Hist_SC_Phi_mass_Bs0M     = new TH1F ("SC_Phi_mass_Bs0M","SC_Phi_mass_Bs0M;M(K^{-}K^{+}) [GeV];Entries",100, 0.97, 1.07);  
+   Hist_Y4140_mass_Bs0M      = new TH1F ("Y4140_mass_Bs0M","Y4140_mass_Bs0M;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_SC_JPsi_mass_Bs0M    = new TH1F ("SC_JPsi_mass_Bs0M","SC_JPsi_mass_Bs0M;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4);
+   Hist_SC_Phi_mass_Bs0M     = new TH1F ("SC_Phi_mass_Bs0M","SC_Phi_mass_Bs0M;M(K^{+}K^{-}) [GeV];Entries",100, 0.97, 1.07);  
    
-   Hist_Y4140_mass_Bs0NP     = new TH1F ("Y4140_mass_Bs0NP","Y4140_mass_Bs0NP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,4.0, 4.9);
-   Hist_SC_JPsi_mass_Bs0NP   = new TH1F ("SC_JPsi_mass_Bs0NP","SC_JPsi_mass_Bs0NP;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4);
-   Hist_SC_Phi_mass_Bs0NP    = new TH1F ("SC_Phi_mass_Bs0NP","SC_Phi_mass_Bs0NP;M(K^{-}K^{+}) [GeV];Entries",100, 0.97, 1.07);  
+   Hist_Y4140_mass_Bs0NP     = new TH1F ("Y4140_mass_Bs0NP","Y4140_mass_Bs0NP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,4.0, 4.9);
+   Hist_SC_JPsi_mass_Bs0NP   = new TH1F ("SC_JPsi_mass_Bs0NP","SC_JPsi_mass_Bs0NP;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4);
+   Hist_SC_Phi_mass_Bs0NP    = new TH1F ("SC_Phi_mass_Bs0NP","SC_Phi_mass_Bs0NP;M(K^{+}K^{-}) [GeV];Entries",100, 0.97, 1.07);  
 
    /// Bs0 & Some Cuts (HLT, SoftMu, JPsi, Bs0, Phi, Prompt, Middle, Non-Prompt)
-   Hist_Bs0_mass           = new TH1F ("Bs0_mass","Bs0_mass;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_pt             = new TH1F ("Bs0_pT","Bs0_pT; pT(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100, 8, 50);
-   Hist_Bs0_Eta            = new TH1F ("Bs0_Eta","Bs0_Eta; Eta(#mu^{-}#mu^{+}K^{-}K^{+});Entries",100, -5, 5);
-   Hist_Bs0_Phi            = new TH1F ("Bs0_Phi","Bs0_Phi; Phi (#mu^{-}#mu^{+}K^{-}K^{+});Entries",100, -5, 5);   
-   Hist_Bs0_PtvsEta        = new TH2F ("Bs0_PtvsEta","Bs0_PtvsEta;Eta(#mu^{-}#mu^{+}K^{-}K^{+});pT(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
-   Hist_Bs0_mass_HLT       = new TH1F ("Bs0_mass_HLT","Bs0_mass_HLT;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_SoftMu    = new TH1F ("Bs0_mass_SoftMu","Bs0_mass_SoftMu;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_JPsi      = new TH1F ("Bs0_mass_JPsi","Bs0_mass_JPsi;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_PtvsEta_JPsi   = new TH2F ("Bs0_PtvsEta_JPsi","Bs0_PtvsEta_JPsi;Eta(#mu^{-}#mu^{+}K^{-}K^{+});pT(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
-   Hist_Bs0_mass_Prompt    = new TH1F ("Bs0_mass_Prompt","Bs0_mass_Prompt;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_Mixed     = new TH1F ("Bs0_mass_Mixed","Bs0_mass_Mixed;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_NonPrompt = new TH1F ("Bs0_mass_NonPrompt","Bs0_mass_NonPrompt;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_Track     = new TH1F ("Bs0_mass_Track","Bs0_mass_Track;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_TrackP    = new TH1F ("Bs0_mass_TrackP","Bs0_mass_TrackP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_TrackM    = new TH1F ("Bs0_mass_TrackM","Bs0_mass_TrackM;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_TrackNP   = new TH1F ("Bs0_mass_TrackNP","Bs0_mass_TrackNP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_Phi       = new TH1F ("Bs0_mass_Phi","Bs0_mass_Phi;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_PhiP      = new TH1F ("Bs0_mass_PhiP","Bs0_mass_PhiP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_PhiM      = new TH1F ("Bs0_mass_PhiM","Bs0_mass_PhiM;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_PhiNP     = new TH1F ("Bs0_mass_PhiNP","Bs0_mass_PhiNP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_Bs0_mass_Bs0       = new TH1F ("Bs0_mass_Bs0","Bs0_mass_Bs0;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",101,5.15, 5.55);
+   Hist_Bs0_mass           = new TH1F ("Bs0_mass","Bs0_mass;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_pt             = new TH1F ("Bs0_pT","Bs0_pT; pT(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100, 8, 50);
+   Hist_Bs0_Eta            = new TH1F ("Bs0_Eta","Bs0_Eta; Eta(#mu^{+}#mu^{-}K^{+}K^{-});Entries",100, -5, 5);
+   Hist_Bs0_Phi            = new TH1F ("Bs0_Phi","Bs0_Phi; Phi (#mu^{+}#mu^{-}K^{+}K^{-});Entries",100, -5, 5);   
+   Hist_Bs0_PtvsEta        = new TH2F ("Bs0_PtvsEta","Bs0_PtvsEta;Eta(#mu^{+}#mu^{-}K^{+}K^{-});pT(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
+   Hist_Bs0_mass_HLT       = new TH1F ("Bs0_mass_HLT","Bs0_mass_HLT;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_SoftMu    = new TH1F ("Bs0_mass_SoftMu","Bs0_mass_SoftMu;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_JPsi      = new TH1F ("Bs0_mass_JPsi","Bs0_mass_JPsi;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_PtvsEta_JPsi   = new TH2F ("Bs0_PtvsEta_JPsi","Bs0_PtvsEta_JPsi;Eta(#mu^{+}#mu^{-}K^{+}K^{-});pT(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV]",100, -2.6, 2.6, 100, 5, 35);
+   Hist_Bs0_mass_Prompt    = new TH1F ("Bs0_mass_Prompt","Bs0_mass_Prompt;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_Mixed     = new TH1F ("Bs0_mass_Mixed","Bs0_mass_Mixed;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_NonPrompt = new TH1F ("Bs0_mass_NonPrompt","Bs0_mass_NonPrompt;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_Track     = new TH1F ("Bs0_mass_Track","Bs0_mass_Track;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_TrackP    = new TH1F ("Bs0_mass_TrackP","Bs0_mass_TrackP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_TrackM    = new TH1F ("Bs0_mass_TrackM","Bs0_mass_TrackM;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_TrackNP   = new TH1F ("Bs0_mass_TrackNP","Bs0_mass_TrackNP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_Phi       = new TH1F ("Bs0_mass_Phi","Bs0_mass_Phi;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_PhiP      = new TH1F ("Bs0_mass_PhiP","Bs0_mass_PhiP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_PhiM      = new TH1F ("Bs0_mass_PhiM","Bs0_mass_PhiM;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_PhiNP     = new TH1F ("Bs0_mass_PhiNP","Bs0_mass_PhiNP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_Bs0_mass_Bs0       = new TH1F ("Bs0_mass_Bs0","Bs0_mass_Bs0;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",101,5.15, 5.55);
    
-   Hist_Bs0_mass_Bs0P      = new TH1F ("Bs0_mass_Bs0P","Bs0_mass_Bs0P;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_CC_JPsi_mass_Bs0P  = new TH1F ("CC_JPsi_mass_Bs0P","CC_JPsi_mass_Bs0P;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4);
-   Hist_CC_Phi_mass_Bs0P   = new TH1F ("CC_Phi_mass_Bs0P","CC_Phi_mass_Bs0P;M(K^{-}K^{+}) [GeV];Entries",100, 0.97, 1.07);  
+   Hist_Bs0_mass_Bs0P      = new TH1F ("Bs0_mass_Bs0P","Bs0_mass_Bs0P;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_CC_JPsi_mass_Bs0P  = new TH1F ("CC_JPsi_mass_Bs0P","CC_JPsi_mass_Bs0P;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4);
+   Hist_CC_Phi_mass_Bs0P   = new TH1F ("CC_Phi_mass_Bs0P","CC_Phi_mass_Bs0P;M(K^{+}K^{-}) [GeV];Entries",100, 0.97, 1.07);  
    
-   Hist_Bs0_mass_Bs0M      = new TH1F ("Bs0_mass_Bs0M","Bs0_mass_Bs0M;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_CC_JPsi_mass_Bs0M  = new TH1F ("CC_JPsi_mass_Bs0M","CC_JPsi_mass_Bs0M;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4);
-   Hist_CC_Phi_mass_Bs0M   = new TH1F ("CC_Phi_mass_Bs0M","CC_Phi_mass_Bs0M;M(K^{-}K^{+}) [GeV];Entries",100, 0.97, 1.07);  
+   Hist_Bs0_mass_Bs0M      = new TH1F ("Bs0_mass_Bs0M","Bs0_mass_Bs0M;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_CC_JPsi_mass_Bs0M  = new TH1F ("CC_JPsi_mass_Bs0M","CC_JPsi_mass_Bs0M;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4);
+   Hist_CC_Phi_mass_Bs0M   = new TH1F ("CC_Phi_mass_Bs0M","CC_Phi_mass_Bs0M;M(K^{+}K^{-}) [GeV];Entries",100, 0.97, 1.07);  
    
-   Hist_Bs0_mass_Bs0NP     = new TH1F ("Bs0_mass_Bs0NP","Bs0_mass_Bs0NP;M(#mu^{-}#mu^{+}K^{-}K^{+}) [GeV];Entries",100,5.15, 5.55);
-   Hist_CC_JPsi_mass_Bs0NP = new TH1F ("CC_JPsi_mass_Bs0NP","CC_JPsi_mass_Bs0NP;M(#mu^{-}#mu^{+}) [GeV];Entries",100,2.8, 3.4);
-   Hist_CC_Phi_mass_Bs0NP  = new TH1F ("CC_Phi_mass_Bs0NP","CC_Phi_mass_Bs0NP;M(K^{-}K^{+}) [GeV];Entries",100, 0.97, 1.07);  
+   Hist_Bs0_mass_Bs0NP     = new TH1F ("Bs0_mass_Bs0NP","Bs0_mass_Bs0NP;M(#mu^{+}#mu^{-}K^{+}K^{-}) [GeV];Entries",100,5.15, 5.55);
+   Hist_CC_JPsi_mass_Bs0NP = new TH1F ("CC_JPsi_mass_Bs0NP","CC_JPsi_mass_Bs0NP;M(#mu^{+}#mu^{-}) [GeV];Entries",100,2.8, 3.4);
+   Hist_CC_Phi_mass_Bs0NP  = new TH1F ("CC_Phi_mass_Bs0NP","CC_Phi_mass_Bs0NP;M(K^{+}K^{-}) [GeV];Entries",100, 0.97, 1.07);  
 
 
    Hist_CTau_CTauE_PV = new TH1F ("CTau_CTauE_PV","CTau_CTauE_PV;Entries", 100, -2, 16);
@@ -431,7 +431,7 @@ Bool_t Y4140::Process(Long64_t entry)
    Hist_Y4140_PtvsEta->Fill(Bs0_Y.Eta(),Bs0_Y.Pt());
  }
 
-  else if ((Bs0_Y.M() > 5.15) && (Bs0_Y.M() < 5.55)) {
+  else if ((Bs0_Y.M() > 5.15) && (Bs0_Y.M() < 5.55)) { /// BPH-16-002: 5.20-5.55
    Hist_Bs0_mass->Fill((*XMass)[myXIdx]);
    Hist_Bs0_pt->Fill(Bs0_Y.Pt());
    Hist_Bs0_Eta->Fill(Bs0_Y.Eta());
@@ -481,11 +481,11 @@ Bool_t Y4140::Process(Long64_t entry)
 
             //////////// JPsi Cut ////////////
             if (1 
-                && JPsi.Pt() > 8.0 
+                && JPsi.Pt() > 8.0 /// BPH-16-002: > 7.0
                 && fabs(JPsi.M() - JPsi_mass) < 0.12
-                && ((*MuMuVtx_CL)[myJPsiIdx]) > 0.01
-		&& fabs(mu1.Eta()) < 2.4 && fabs(mu2.Eta()) < 2.4 
-                && mu1.Pt() > 3.3 && mu2.Pt() > 3.3
+                && ((*MuMuVtx_CL)[myJPsiIdx]) > 0.01 /// BPH-16-002: > 0.1
+		&& fabs(mu1.Eta()) < 2.4 && fabs(mu2.Eta()) < 2.2 /// BPH-16-002: < 2.2 /// ours < 2.4
+                && mu1.Pt() > 3.3 && mu2.Pt() > 3.3 /// BPH-16-002: > 4.0 
                 && mu1_PtSel && mu2_PtSel
              ) {
 
@@ -510,7 +510,7 @@ Bool_t Y4140::Process(Long64_t entry)
                       }
                	   } /// Prompt cuts
 
-               	   else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 2 && ((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx])  < 3.5) {
+               	   else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 2 && ((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx])  < 3) {
                       if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                       Hist_Y4140_mass_Mixed->Fill((*XMass)[myXIdx]);
                       }
@@ -519,7 +519,7 @@ Bool_t Y4140::Process(Long64_t entry)
                       }
                    } /// Mixed cuts
 
-                   else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 3.5) {
+                   else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 3) { /// > 3.5
                       if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                       Hist_Y4140_mass_NonPrompt->Fill((*XMass)[myXIdx]);
                       }
@@ -555,7 +555,7 @@ Bool_t Y4140::Process(Long64_t entry)
                           }
                        } /// Prompt cuts
 
-                       else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 2 && ((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx])  < 3.5) {
+                       else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 2 && ((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx])  < 3) {
                           if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                           Hist_Y4140_mass_TrackM->Fill((*XMass)[myXIdx]);
                           }
@@ -564,7 +564,7 @@ Bool_t Y4140::Process(Long64_t entry)
                           }
                        } /// Mixed cuts
 
-                       else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 3.5) {
+                       else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 3) {
                           if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                           Hist_Y4140_mass_TrackNP->Fill((*XMass)[myXIdx]);
                           }
@@ -575,7 +575,7 @@ Bool_t Y4140::Process(Long64_t entry)
 
 
        		    //////////// Phi Cut ////////////             
-                    if ((ka1ka2.M()) > 1.013 && (ka1ka2.M()) < 1.026) {  /// 1.008-1.035 first cut // 1.0125-1.0265 CMS B+ // 1.012-1.029 D0 // 1.013-1.026 last cut
+                    if ((ka1ka2.M()) > 1.013 && (ka1ka2.M()) < 1.026) {  /// 1.008-1.035 CMS B+ // 1.0125-1.0265 CMS B+ ? // 1.012-1.029 D0 // 1.013-1.026 last cut
 			if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                         Hist_Y4140_mass_Phi->Fill((*XMass)[myXIdx]);
                         }  
@@ -592,7 +592,7 @@ Bool_t Y4140::Process(Long64_t entry)
                         	}
 			   } /// Prompt cuts
 
-			   else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 2 && ((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx])  < 3.5) {  
+			   else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 2 && ((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx])  < 3) {  
                         	if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                         	Hist_Y4140_mass_PhiM->Fill((*XMass)[myXIdx]);
                         	}	
@@ -601,7 +601,7 @@ Bool_t Y4140::Process(Long64_t entry)
                         	}
 			  } /// Mixed cuts
 	
- 			  else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 3.5) { 
+ 			  else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 3) { 
 
                         	if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                         	Hist_Y4140_mass_PhiNP->Fill((*XMass)[myXIdx]);
@@ -615,7 +615,8 @@ Bool_t Y4140::Process(Long64_t entry)
 				//////////// Bs0 Cut ////////////
 				if (1 
                     		   && fabs((*XCosAlphaPV)[myXIdx]) > 0.99
-                           	   && ((*XVtx_CL)[myXIdx]) > 0.03
+                           	   && ((*XVtx_CL)[myXIdx]) > 0.01 /// BPH-16-002: > 0.01 // ours > 0.03
+				   //&& Bs0_Y.Pt() > 10
                         	) { 
 			
  				  if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
@@ -642,7 +643,7 @@ Bool_t Y4140::Process(Long64_t entry)
                                 	 }
                            	      } /// Prompt cuts
 
-				      else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 2 && ((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx])  < 3.5) {
+				      else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 2 && ((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx])  < 3) {
                                          if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
 						//if ((ka1ka2.M()) > 1.013 && (ka1ka2.M()) < 1.026) {
                                          	Hist_Y4140_mass_Bs0M->Fill((*XMass)[myXIdx]);
@@ -659,7 +660,7 @@ Bool_t Y4140::Process(Long64_t entry)
                                          }
                                       } /// Mixed cuts
 				     	
-				      else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 3.5) {
+				      else if (((*XLxyPV)[myXIdx] / (*XLxyPVE)[myXIdx]) > 3) {
                                          if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
 						//if ((ka1ka2.M()) > 1.013 && (ka1ka2.M()) < 1.026) {
                                          	Hist_Y4140_mass_Bs0NP->Fill((*XMass)[myXIdx]);
