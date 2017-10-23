@@ -484,7 +484,7 @@ Bool_t Y4140::Process(Long64_t entry)
                 && JPsi.Pt() > 8.0 /// BPH-16-002: > 7.0
                 && fabs(JPsi.M() - JPsi_mass) < 0.12
                 && ((*MuMuVtx_CL)[myJPsiIdx]) > 0.01 /// BPH-16-002: > 0.1
-		&& fabs(mu1.Eta()) < 2.4 && fabs(mu2.Eta()) < 2.2 /// BPH-16-002: < 2.2 /// ours < 2.4
+		&& fabs(mu1.Eta()) < 2.2 && fabs(mu2.Eta()) < 2.2 /// BPH-16-002: < 2.2 /// ours < 2.4
                 && mu1.Pt() > 3.3 && mu2.Pt() > 3.3 /// BPH-16-002: > 4.0 
                 && mu1_PtSel && mu2_PtSel
              ) {
@@ -575,7 +575,7 @@ Bool_t Y4140::Process(Long64_t entry)
 
 
        		    //////////// Phi Cut ////////////             
-                    if ((ka1ka2.M()) > 1.013 && (ka1ka2.M()) < 1.026) {  /// 1.008-1.035 CMS B+ // 1.0125-1.0265 CMS B+ ? // 1.012-1.029 D0 // 1.013-1.026 last cut
+                    if ((Phi.M()) > 1.013 && (Phi.M()) < 1.026) {  /// 1.008-1.035 CMS B+ // 1.0125-1.0265 CMS B+ ? // 1.012-1.029 D0 // 1.013-1.026 last cut
 			if ((Bs0_Y.M() > 4.05) && (Bs0_Y.M() < 4.8)) {
                         Hist_Y4140_mass_Phi->Fill((*XMass)[myXIdx]);
                         }  
